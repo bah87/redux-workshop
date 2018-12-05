@@ -3,7 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { addCleaning, addShopping, addTodo, removeTodo } from './frontend/actions';
+import { 
+  addCleaning, 
+  addShopping, 
+  addTodo, 
+  removeTodo, 
+  clearList 
+} from './frontend/actions';
 import store from './frontend/store';
 
 // put store and actions on the window
@@ -11,7 +17,8 @@ window.store = store;
 window.addCleaning = addCleaning;
 window.addShopping = addShopping;
 window.addTodo = addTodo;
-window.removeTodo = removeTodo
+window.removeTodo = removeTodo;
+window.clearList = clearList;
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

@@ -23,3 +23,9 @@ export const removeTodo = item => {
     item
   };
 };
+
+export const clearList = () => {
+  return {
+    type: 'CLEAR_LIST'
+  };
+};

@@ -105,3 +105,30 @@ Check out the `phase-01-solution` branch to see the source code!
 
 # Phase 02 - React + Redux
 Run `git checkout phase-02` to checkout the Phase 02 branch<br>
+
+```
+import { connect } from 'react-redux';
+import { addTodo, clearList, removeTodo } from '../actions';
+import Todo from './todo';
+
+const mapStateToProps = state => ({
+  items: state
+});
+
+const mapDispatchToProps = dispatch => ({
+  addTodo: item => dispatch(addTodo(item)),
+  removeTodo: item => dispatch(removeTodo(item)),
+  clearList: () => dispatch(clearList())
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Todo);
+```
+
+```
+<Provider store={store}>
+  <TodoContainer />
+</Provider>
+```

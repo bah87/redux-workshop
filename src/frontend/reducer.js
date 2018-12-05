@@ -8,6 +8,8 @@ const reducer = (state = [], action) => {
     case 'REMOVE_TODO':
       return state.filter(item => item !== action.item);
     // Always have a default that returns the current state
+    case 'CLEAR_LIST':
+      return [];
     default:
       return state;
   }
