@@ -6,7 +6,7 @@ const reducer = (state = [], action) => {
         action.item
       ];
     case 'REMOVE_TODO':
-      return state.filter(item => item !== action.item);
+      return state.filter((_item, id) => id !== action.id);
     // Always have a default that returns the current state
     case 'CLEAR_LIST':
       return [];

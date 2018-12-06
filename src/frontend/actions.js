@@ -17,10 +17,10 @@ export const addTodo = item => {
   };
 };
 
-export const removeTodo = item => {
+export const removeTodo = id => {
   return {
     type: 'REMOVE_TODO',
-    item
+    id
   };
 };
 

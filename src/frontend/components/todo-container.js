@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   addTodo: item => dispatch(addTodo(item)),
-  removeTodo: item => dispatch(removeTodo(item)),
+  removeTodo: id => dispatch(removeTodo(id)),
   clearList: () => dispatch(clearList())
 });
 

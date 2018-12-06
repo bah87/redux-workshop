@@ -43,7 +43,7 @@ export default class Todo extends React.Component {
             return (
               <li key={id}>
                 <div>{item}</div>
-                <button onClick={this.removeTodo(item)}>Remove</button>
+                <button onClick={this.removeTodo(id)}>Remove</button>
               </li>
             );
           })}
