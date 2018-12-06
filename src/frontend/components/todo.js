@@ -12,21 +12,6 @@ export default class Todo extends React.Component {
     this.setState({ value: e.target.value });
   };
 
-  addTodo = () => {
-    this.props.addTodo(this.state.value);
-    this.setState({ value: '' });
-  };
-
-  removeTodo = item => {
-    return () => {
-      this.props.removeTodo(item);
-    };
-  };
-
-  clearList = () => {
-    this.props.clearList();
-  };
-
   render() {
     return (
       <div>
@@ -36,14 +21,14 @@ export default class Todo extends React.Component {
           value={this.state.value}
           onChange={this.onChange}
         />
-        <button onClick={this.addTodo}>Submit</button>
-        <button onClick={this.clearList}>Clear List</button>
+        <button>Submit</button>
+        <button>Clear List</button>
         <ul>
           {this.props.items.map((item, id) => {
             return (
               <li key={id}>
                 <div>{item}</div>
-                <button onClick={this.removeTodo(id)}>Remove</button>
+                <button>Remove</button>
               </li>
             );
           })}
