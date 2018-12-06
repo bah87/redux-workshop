@@ -23,6 +23,8 @@ Let's build a simple Todo app to demonstrate how Redux works.
 # Phase 01 - Redux Only
 Run `git checkout phase-01` to checkout the Phase 01 branch<br>
 
+Create a new folder called `frontend` under `src`.<br>
+
 ## Actions
 An action is a POJO (plain old JavaScript object) with a type property that contains information used to update the store. Actions can be dispatched (sent to the store) in response to server requests or user actions. It's common to use action creators that accept arguments in order to customize the data contained in the actions they return.
 
@@ -79,7 +81,7 @@ export default store;
 The `createStore` method comes with Redux and is used to create the instance of your app's store using the reducer you just created. 
 
 ## Going a step further
-Next, we add the store and the actions we just created to the window so we can test them out in Chrome. Add the following to `App.js`:<br>
+Next, we add the store and the actions we just created to the window so we can test them out in Chrome. Add the following to `index.js`. You'll need to import store and the actions.<br>
 ```
 // put store and actions on the window
 window.store = store;

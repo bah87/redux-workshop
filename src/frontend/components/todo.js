@@ -17,9 +17,9 @@ export default class Todo extends React.Component {
     this.setState({ value: '' });
   };
 
-  removeTodo = item => {
+  removeTodo = id => {
     return () => {
-      this.props.removeTodo(item);
+      this.props.removeTodo(id);
     };
   };
 
